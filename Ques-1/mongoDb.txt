@@ -1,0 +1,30 @@
+1st way to solve this problem
+
+use DbName
+>db.createCollection('collectionName',{
+"place" : "MongoTree",
+"type": "resort",
+"cost" : { "actual_cost" : 1200, "discount_cost": 999}
+,"Itinerary" : { "welcome_drinks" :" yes",  "breakfast" : ["egg", " bread",  "jam", "south breakfast", "coffee/tea"],  "games": ["table tennis", "foot ball", "dart games"], "watergames": "yes" }
+});
+
+2nd way to solve this problem
+
+use DbName
+>db.createCollection('collectionName');
+>db.insert({
+"place" : "MongoTree",
+"type": "resort",
+"cost" : { "actual_cost" : 1200, "discount_cost": 999}
+"Itinerary" : { "welcome_drinks" :" yes",  "breakfast" : ["egg", " bread",  "jam", "south breakfast", "coffee/tea"],  "games": ["table tennis", "foot ball", "dart games"], "watergames": "yes" }
+});
+
+We also use save function instead of insert function for the same problem.
+
+>db.createCollection('collectionName');
+>db.save({
+"place" : "MongoTree",
+"type": "resort",
+"cost" : { "actual_cost" : 1200, "discount_cost": 999}
+"Itinerary" : { "welcome_drinks" :" yes",  "breakfast" : ["egg", " bread",  "jam", "south breakfast", "coffee/tea"],  "games": ["table tennis", "foot ball", "dart games"], "watergames": "yes" }
+});
